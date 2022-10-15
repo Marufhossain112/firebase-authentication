@@ -43,4 +43,5 @@ function App() {
   );
 }
 // a comment
+// just without any cli yeah
 export default App;
