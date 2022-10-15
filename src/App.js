@@ -2,6 +2,8 @@ import logo from "./logo.svg";
 import "./App.css";
 import { getAuth } from "firebase/auth";
 import app from "./firebase.init";
+import { Form } from "react-bootstrap";
+import Forms from "./Forms";
 const auth = getAuth(app);
 function App() {
   const handleForm = (e) => {
@@ -11,35 +13,10 @@ function App() {
     const password = e.target.password.value;
     // console.log(email,password);
   };
-  const emailOnchange = (e) => {
-    console.log(e.target.value);
-  };
-  const emailOnchangeBlur = (e) => {
-    console.log(e.target.value);
-  };
+
   return (
-    <div className="App">
-      <form onSubmit={handleForm}>
-        <input
-          onBlur={emailOnchangeBlur}
-          // onChange={emailOnchange}
-          type="email"
-          name="email"
-          placeholder="Your email"
-        />
-        {/* i am finch */}
-        <br />
-        <input
-          // onChange={emailOnchange}
-          onBlur={emailOnchangeBlur}
-          // i am changed
-          type="password"
-          name="password"
-          placeholder="Your password"
-        />
-        <br />
-        <button type="submit">Submit</button>
-      </form>
+    <div>
+      <Forms></Forms>
     </div>
   );
 }
