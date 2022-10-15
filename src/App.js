@@ -27,6 +27,7 @@ function App() {
           name="email"
           placeholder="Your email"
         />
+        {/* i am finch */}
         <br />
         <input
           // onChange={emailOnchange}
