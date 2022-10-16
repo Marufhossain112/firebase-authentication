@@ -69,13 +69,13 @@ const Login = () => {
             <p className="text-success">You have submitted successfully.</p>
           )}
           <Button variant="primary" type="submit">
-            Register
+            Login
           </Button>
         </Form>
         <p>
           <small>
             Are You New Here, Please Register{" "}
-            <Link to="/register">Log in</Link>{" "}
+            <Link to="/register">Register</Link>{" "}
           </small>
         </p>
       </div>

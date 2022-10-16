@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  getAuth,
+  sendEmailVerification,
+} from "firebase/auth";
 import app from "./firebase.init";
 import { Link } from "react-router-dom";
 const auth = getAuth(app);
@@ -19,7 +23,8 @@ const Forms = () => {
         const user = result.user;
         setSuccess(true);
         form.reset();
-        console.log(user);
+        verifyEmail();
+        console.log(user.emailVerified);
       })
       .catch((error) => {
         console.log(error);
@@ -38,6 +43,11 @@ const Forms = () => {
       return;
     }
     setPassword("");
+  };
+  const verifyEmail = () => {
+    sendEmailVerification(auth.currentUser).then(() => {
+      alert("Please verify your email address.");
+    });
   };
   return (
     <div className="w-50 mx-auto">
