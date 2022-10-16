@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import { getAuth } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import app from "../firebase.init";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { createUserWithEmailAndPassword } from "firebase/auth";
 import { Link } from "react-router-dom";
-// import app from "./firebase.init";
-// const auth = getAuth(app);
+const auth = getAuth(app);
 const Login = () => {
   const [password, setPassword] = useState("");
   const [success, setSuccess] = useState(false);
@@ -15,7 +14,7 @@ const Login = () => {
     const form = e.target;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    createUserWithEmailAndPassword(email, password)
+    signInWithEmailAndPassword(auth, email, password)
       .then((result) => {
         const user = result.user;
         setSuccess(true);
