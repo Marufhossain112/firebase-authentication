@@ -72,7 +72,7 @@ const Forms = () => {
       </Form>
       <p>
         <small>
-          Already have an account, Please Login <Link to="/login">Link</Link>{" "}
+          Already have an account, Please Login <Link to="/login">Log in</Link>{" "}
         </small>
       </p>
     </div>
