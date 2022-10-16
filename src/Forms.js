@@ -78,9 +78,5 @@ const Forms = () => {
     </div>
   );
 };
-// new shortcurt added
-// i am forced pushed halloe
-//  now i am empty
-//  no verify
-//  coommit 
+
 export default Forms;
