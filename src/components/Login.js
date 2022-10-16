@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-const auth = getAuth(app);
-
+import { getAuth } from "firebase/auth";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { createUserWithEmailAndPassword } from "firebase/auth";
