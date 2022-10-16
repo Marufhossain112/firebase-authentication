@@ -4,8 +4,8 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { Link } from "react-router-dom";
-import app from "./firebase.init";
-const auth = getAuth(app);
+// import app from "./firebase.init";
+// const auth = getAuth(app);
 const Login = () => {
   const [password, setPassword] = useState("");
   const [success, setSuccess] = useState(false);
