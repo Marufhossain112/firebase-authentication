@@ -78,5 +78,5 @@ const Forms = () => {
     </div>
   );
 };
-
+// new shortcurt added
 export default Forms;
